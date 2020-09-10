@@ -87,3 +87,7 @@ document.write(updateIntegers);
 
 
 document.write("<h1>Arrow Function</h1>");
+const numbers = [1, 2, 3, 4, 5];
+
+const updateNumbers = numbers.map((value) => value *= 10);
+document.write(updateNumbers);
