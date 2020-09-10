@@ -168,3 +168,8 @@ team = team.concat(batsmens);
 team.push("Sarfaraz");
 team = team.concat(bowlers);
 console.log(team);
+
+
+// Spread operator 
+team = [...batsmens, "Sarfaraz", ...bowlers];
+document.write(team);
