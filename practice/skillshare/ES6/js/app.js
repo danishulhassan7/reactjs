@@ -107,3 +107,38 @@ const fullname = "Danish Ul Hassan";
 const myAge = 21;
 const details = ` <strong> My name is ${fullname}, and I'm ${myAge} years old. </strong>`;
 document.write(details);
+
+//Prototype Methods
+document.write("<h1>Prototype Methods</h1>");
+document.write("All results in console.log");
+
+// simple object 
+const Person = {
+    name: "Dani",
+    age: 20,
+    gender: "Male"
+}
+
+console.log(Person);
+
+// creating function constructor
+
+function Details(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+
+const dani = new Details("Malik", 21, "Male");
+console.log(dani);
+
+// Using Prototype method 
+
+Details.prototype.speak = function() {
+    console.log(`My name is ${this.name}, and I'm ${this.age} years old.`);
+}
+
+dani.speak();
+
+// Classes 
+document.write("<h1>Classes</h1>");
