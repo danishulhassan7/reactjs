@@ -142,3 +142,29 @@ dani.speak();
 
 // Classes 
 document.write("<h1>Classes</h1>");
+
+class Data {
+    constructor(myName, myAge) {
+        this.myName = myName;
+        this.myAge = myAge
+    }
+    speak() {
+        document.write(`My name is ${this.myName}, and I'm ${this.myAge} years old!`);
+    }
+}
+
+const steve = new Data("Steven Smith", 29);
+steve.speak();
+
+// Spread Operators
+document.write("<h1>Spread Operators</h1>");
+
+const batsmens = ['Fakher', 'Imam', 'Baber', 'Haris', 'Iftthikar', 'Haider'];
+const bowlers = ['Shadab', 'Wahab', 'Shaheen', 'Amir'];
+
+// Without Spread operators 
+let team = [];
+team = team.concat(batsmens);
+team.push("Sarfaraz");
+team = team.concat(bowlers);
+console.log(team);
