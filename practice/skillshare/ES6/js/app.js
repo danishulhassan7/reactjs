@@ -100,5 +100,10 @@ const adults = ages.filter((check) => check > 18);
 document.write(adults);
 
 
+//Template Strings
+document.write("<h1>Template Strings</h1>");
 
-document.write("<h1>Arrow Function</h1>");
+const fullname = "Danish Ul Hassan";
+const myAge = 21;
+const details = ` <strong> My name is ${fullname}, and I'm ${myAge} years old. </strong>`;
+document.write(details);
