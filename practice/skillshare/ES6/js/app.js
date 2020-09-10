@@ -78,8 +78,12 @@ if (num3 == 30) {
 //Functions
 document.write("<h1>Simple Function</h1>");
 
+const integers = [1, 2, 3, 4, 5];
 
-
+const updateIntegers = integers.map(function(num) {
+    return num *= 5;
+});
+document.write(updateIntegers);
 
 
 document.write("<h1>Arrow Function</h1>");
