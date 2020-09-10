@@ -91,3 +91,14 @@ const numbers = [1, 2, 3, 4, 5];
 
 const updateNumbers = numbers.map((value) => value *= 10);
 document.write(updateNumbers);
+
+document.write("<h1>Arrow function with filter method</h1>");
+
+const ages = [25, 5, 19, 54, 21, 18, 24, 17, 9];
+
+const adults = ages.filter((check) => check > 18);
+document.write(adults);
+
+
+
+document.write("<h1>Arrow Function</h1>");
