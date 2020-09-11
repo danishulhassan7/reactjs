@@ -173,3 +173,47 @@ console.log(team);
 // Spread operator 
 team = [...batsmens, "Sarfaraz", ...bowlers];
 document.write(team);
+
+// Object Destructuring
+document.write("<h1>Object Destructuring</h1>");
+
+let obj = {
+    myname: "Malik Danish Ul Hassan",
+    mycity: "Karachi",
+    email: "danishulhasasn7@xpf.com"
+}
+
+let { myname, mycity, email } = obj;
+
+document.write(myname + "<br>");
+document.write(mycity + "<br>");
+document.write(email + "<br>");
+
+
+//Arrays Destructuring
+let nums = [22, 34, 56, 34, 76, 27, 91, 30];
+let [n1, n2, n3, ...remainingNums] = nums;
+
+document.write(n1 + "<br>");
+document.write(n2 + "<br>");
+document.write(n3 + "<br>");
+document.write(remainingNums + "<br>");
+document.write("<br>");
+
+//Another Example
+
+let obj1 = {
+    username: "Malik Danish Ul Hassan",
+    usercity: "Karachi"
+};
+
+function message({ username, usercity }) {
+    document.write(`Hello, ${username}. How's the weather in ${usercity}?`);
+}
+
+message(obj1);
+
+
+
+// Object Destructuring
+// document.write("<h1>Object Destructuring</h1>");
