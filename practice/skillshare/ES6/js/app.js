@@ -243,3 +243,6 @@ divide(a, b)
     .then(result => document.write("The result of Division is: ", result + "<br>"))
     .catch(err => document.write("There was an error: ", err + "<br>"));
 document.write("End of Script" + "<br>");
+
+// ES6 Basic Concepts Complete 
+document.write(`<h1> ES6 Basic Concepts Complete </h1>`);
