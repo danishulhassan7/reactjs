@@ -215,5 +215,31 @@ message(obj1);
 
 
 
-// Object Destructuring
-// document.write("<h1>Object Destructuring</h1>");
+// Promises
+document.write("<h1>Promises</h1>");
+
+
+function divide(num1, num2) {
+    return new Promise((resolve, reject) => {
+        if (typeof num1 !== 'number') {
+            reject("First argument is not a number");
+        }
+        if (typeof num2 !== 'number') {
+            reject("Second argument is not a number");
+        }
+        if (num2 == 0) {
+            reject("Number can not be divided by zero");
+        }
+        resolve(num1 / num2);
+    });
+}
+
+
+
+document.write("Start of Script" + "<br>");
+let a = 20,
+    b = 5;
+divide(a, b)
+    .then(result => document.write("The result of Division is: ", result + "<br>"))
+    .catch(err => document.write("There was an error: ", err + "<br>"));
+document.write("End of Script" + "<br>");
