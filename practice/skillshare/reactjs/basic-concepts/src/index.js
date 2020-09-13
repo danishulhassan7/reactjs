@@ -4,6 +4,7 @@ import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import AppContent from './AppContent';
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 class App extends Component {
