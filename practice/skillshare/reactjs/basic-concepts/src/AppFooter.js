@@ -1,9 +1,10 @@
 import React from 'react';
+import './AppFooter.css'
 
 export default function AppFooter() {
-    return(
+    return (
         <div>
-            <p>&copy; All rights reserved by XPF Inc.</p>
+            <p className="app-footer">&copy; All rights reserved by XPF Inc.</p>
         </div>
     );
 }
