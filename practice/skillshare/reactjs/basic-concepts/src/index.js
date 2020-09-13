@@ -18,7 +18,7 @@ class App extends Component {
     <div className="app">
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
-      <AppFooter website={footerProps.website} company={footerProps.company} year={footerProps.year} />
+      <AppFooter {...footerProps}/>
     </div>
     );
   }
