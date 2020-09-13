@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return(
     <div className="app">
-      <AppHeader/>
+      <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
       <AppFooter/>
     </div>
