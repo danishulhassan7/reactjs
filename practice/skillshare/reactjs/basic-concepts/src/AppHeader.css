@@ -1,3 +1,6 @@
 .app-header {
-    background-color: rgb(210, 223, 206);
+    background-color: rgb(53, 5, 93);
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
 }
