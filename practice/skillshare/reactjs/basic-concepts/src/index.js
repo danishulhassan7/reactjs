@@ -8,6 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import StatefullComponent from './statefullComponent';
 import StateLessComponent from './statelessComponent';
 
+// For linking 
+
+import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
@@ -24,6 +28,7 @@ class App extends Component {
       <StatefullComponent/>
       <StateLessComponent/>
       <AppFooter {...footerProps}/>
+      <NavLink activeClassName="active" to="/">HEllO</NavLink>
     </div>
     );
   }
