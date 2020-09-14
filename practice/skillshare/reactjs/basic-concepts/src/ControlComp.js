@@ -10,20 +10,24 @@ export default class ControlComp extends Component {
     }
 
     tfHandler = (evt) => {
-        let name = evt.target.name;
-        let value = evt.target.value;
-        console.log(name,value);
+        // let name = evt.target.name;
+        // let value = evt.target.value;
+        // console.log(name,value);
 
-        let modifiedState = {};
-        modifiedState[name] = value;
-        console.log(modifiedState);
-        this.setState(modifiedState);
+        // let modifiedState = {};
+        // modifiedState[name] = value;
+        // console.log(modifiedState);
+        // this.setState(modifiedState);
+
+        this.setState({[evt.target.name]: evt.target.value});
+
     }
     render() {
         return(
             <div className="container mt-3">
                 <h1 className="my-2 alert alert-info">Controlled Components Demo</h1>
                 <h2>Add a new contact</h2>
+                <p> {JSON.stringify(this.state)} </p>
                 <form className="form">
                     <div className="form-group-row">
                         <label htmlFor="name" className="control-label col-md-4">
