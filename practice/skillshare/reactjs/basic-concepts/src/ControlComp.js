@@ -10,7 +10,14 @@ export default class ControlComp extends Component {
     }
 
     tfHandler = (evt) => {
-        console.log(evt.target);
+        let name = evt.target.name;
+        let value = evt.target.value;
+        console.log(name,value);
+
+        let modifiedState = {};
+        modifiedState[name] = value;
+        console.log(modifiedState);
+        this.setState(modifiedState);
     }
     render() {
         return(
@@ -23,7 +30,7 @@ export default class ControlComp extends Component {
                             Name: 
                         </label>
                         <div className="col-md-6">
-                            <input type="text" onChange={this.tfHandler} name="name" className="form-control"/>
+                            <input value={this.state.name} type="text" onChange={this.tfHandler} name="name" className="form-control"/>
                         </div>
                     </div>
                     <div className="form-group-row">
@@ -31,7 +38,7 @@ export default class ControlComp extends Component {
                             Email: 
                         </label>
                         <div className="col-md-6">
-                            <input type="text" name="email" className="form-control"/>
+                            <input value={this.state.email} type="text" onChange={this.tfHandler} name="email" className="form-control"/>
                         </div>
                     </div>
                     <div className="form-group-row">
@@ -39,7 +46,7 @@ export default class ControlComp extends Component {
                             Phone:  
                         </label>
                         <div className="col-md-6">
-                            <input type="text" name="phone" className="form-control"/>
+                            <input type="text" value={this.state.phone} onChange={this.tfHandler} name="phone" className="form-control"/>
                         </div>
                     </div>
                     <div className="form-group-row">
@@ -47,7 +54,7 @@ export default class ControlComp extends Component {
                             Picture:
                         </label>
                         <div className="col-md-6">
-                            <input type="text" name="picture" className="form-control"/>
+                            <input type="text" value={this.state.picture} onChange={this.tfHandler} name="picture" className="form-control"/>
                         </div>
                     </div>
                     <div className="my-2 col-md-3">
