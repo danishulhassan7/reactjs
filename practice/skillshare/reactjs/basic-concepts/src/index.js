@@ -20,7 +20,7 @@ class App extends Component {
       year: 2020
     };
     return(
-    <div className="app">
+    <div className="app container">
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
       <UncontrolComp/>
