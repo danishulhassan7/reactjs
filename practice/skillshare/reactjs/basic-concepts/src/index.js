@@ -6,7 +6,7 @@ import AppContent from './AppContent';
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import StatefullComponent from './statefullComponent';
-// import StateLessComponent from './statelessComponent';
+import StateLessComponent from './statelessComponent';
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
       <StatefullComponent/>
-      {/* <StateLessComponent/> */}
+      <StateLessComponent/>
       <AppFooter {...footerProps}/>
     </div>
     );
