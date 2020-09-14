@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import StatefullComponent from './statefullComponent';
 import StateLessComponent from './statelessComponent';
 import UncontrolComp from './UncontrolComp';
+import ControlComp from './ControlComp';
+
 
 
 
@@ -23,6 +25,7 @@ class App extends Component {
     <div className="app container">
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
+      <ControlComp/>
       <UncontrolComp/>
       <StatefullComponent/>
       <StateLessComponent/>
