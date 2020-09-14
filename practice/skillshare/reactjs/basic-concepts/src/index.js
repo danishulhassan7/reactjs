@@ -7,10 +7,8 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import StatefullComponent from './statefullComponent';
 import StateLessComponent from './statelessComponent';
+import UncontrolComp from './UncontrolComp';
 
-// For linking 
-
-import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom';
 
 
 class App extends Component {
@@ -25,10 +23,10 @@ class App extends Component {
     <div className="app">
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
+      <UncontrolComp/>
       <StatefullComponent/>
       <StateLessComponent/>
       <AppFooter {...footerProps}/>
-      <NavLink activeClassName="active" to="/">HEllO</NavLink>
     </div>
     );
   }
