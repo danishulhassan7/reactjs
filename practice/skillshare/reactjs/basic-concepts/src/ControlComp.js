@@ -24,7 +24,7 @@ export default class ControlComp extends Component {
     }
     render() {
         return(
-            <div className="container mt-3">
+            <div className="container mt-2">
                 <h1 className="my-2 alert alert-info">Controlled Components Demo</h1>
                 <h2>Add a new contact</h2>
                 <p> {JSON.stringify(this.state)} </p>
