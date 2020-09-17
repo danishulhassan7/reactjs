@@ -62,6 +62,7 @@ class App extends Component {
     }
 ];
 
+  const contactCards = contacts.map(c=> <ContactCard contact={c}/>)
 // Working With Arrays Ends 
 
     const footerProps = {
@@ -75,6 +76,7 @@ class App extends Component {
       <AppContent/>
       <h1 className="alert alert-info">Working with arrays</h1>
       <ContactCard contact={contact} />
+      {contactCards}
       <ControlComp/>
       <UncontrolComp/>
       <StatefullComponent/>
