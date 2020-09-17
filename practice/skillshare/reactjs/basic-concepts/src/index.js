@@ -62,7 +62,7 @@ class App extends Component {
     }
 ];
 
-  const contactCards = contacts.map(c=> <ContactCard contact={c}/>)
+  const contactCards = contacts.map(c=> <ContactCard key={c.id} contact={c}/>)
 // Working With Arrays Ends 
 
     const footerProps = {
