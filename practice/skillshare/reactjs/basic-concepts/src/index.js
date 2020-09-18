@@ -10,6 +10,7 @@ import StateLessComponent from './statelessComponent';
 import UncontrolComp from './UncontrolComp';
 import ControlComp from './ControlComp';
 import ContactCard from './Arrays';
+import ContactList from './ContactList';
 
 
 
@@ -90,6 +91,7 @@ class App extends Component {
       <AppHeader title="AddressBook App version 1.0.8" subheading="Created by XPF"/>
       <AppContent/>
       <h1 className="alert alert-info">Using AJAX for getting data from REST Endpoint</h1>
+      <ContactList contacts={this.state.contacts} />
       <h1 className="alert alert-info">Working with arrays</h1>
       <ContactCard contact={contact} />
       {contactCards}
