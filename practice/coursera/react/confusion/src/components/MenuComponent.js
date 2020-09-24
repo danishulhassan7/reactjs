@@ -6,31 +6,51 @@ class Menu extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            selectedDish: null
+        };
+    }
+
+    onDishSelect(dish) {
+        this.setState({ selectedDish: dish });
+    }
+
+    renderDish(dish) {
+        if (dish != null)
+            return (
+                <div className="col-md-8 offset-md-2 mt-3">
+                    <Card>
+                        <CardImg top className="img-thumbnail" src={dish.image} alt={dish.name} />
+                        <CardBody>
+                            <CardTitle> {dish.name} </CardTitle>
+                            <CardText> {dish.description} </CardText>
+                        </CardBody>
+                    </Card>
+                </div>
+            );
+        else
+            return (
+                <div></div>
+            );
     }
 
     render() {
-        const menu = this.state.dishes.map((dish)=>{
-            return(
-                <div key={dish.id} className="col-12 mt-5">
-                    <Media tag="li">
-                        <Media left middle>
-                            <Media object src={dish.image} alt={dish.name} />
-                        </Media>
-                        <Media body className="ml-5">
-                            <Media heading> {dish.name} </Media>
-                            <p> {dish.description} </p>
-                        </Media>
-                    </Media>
+        const menu = this.props.dishes.map((dish) => {
+            return (
+                <div key={dish.id} className="col-12 col-md-5 m-2">
+                    <Card onClick={() => this.onDishSelect(dish)}>
+                        <CardImg width="100%" className="img-thumbnail" src={dish.image} alt={dish.name} />
+                        <CardImgOverlay>
+                            <CardTitle> {dish.name} </CardTitle>
+                        </CardImgOverlay>
+                    </Card>
                 </div>
             );
         });
-        return(
+        return (
             <div className="container">
                 <div className="row">
-                    <Media list>
-                       { menu }
-                    </Media>
+                    {menu}
                 </div>
             </div>
         );
