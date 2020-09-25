@@ -3,6 +3,7 @@ import {Navbar, NavbarBrand} from 'reactstrap';
 import './App.css';
 import Menu from './components/MenuComponent';
 import { DISHES } from './shared/dishes';
+import DetailedMenuComp from './components/DetailedMenuComp';
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           </div>
         </Navbar>
         <Menu dishes = {this.state.dishes} />
+        <DetailedMenuComp dishes = {this.state.dishes} />
       </div>
     );
   }
