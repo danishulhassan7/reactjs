@@ -6,7 +6,7 @@ class DishdetailComponent extends Component {
     render() {
         return(
 
-        )
+        );
     }
 }
 
