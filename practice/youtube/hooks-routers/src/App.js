@@ -11,9 +11,22 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-          <Route exact path="/" component={Home} />
+        {/* <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
+          <Route path="/services" component={Services} /> */}
+
+{/* NEW SYNTAX */}
+
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/services">
+          <Services/>
+        </Route>
       </div>
     </BrowserRouter>
   );
