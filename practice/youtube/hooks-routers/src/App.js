@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,18 +15,20 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} /> */}
 
-{/* NEW SYNTAX */}
+        {/* NEW SYNTAX */}
 
 
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/services/:service">
-          <Services/>
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/services/:service">
+            <Services />
+          </Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );
