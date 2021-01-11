@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
+// import { Form } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {Home} from './components/Home';
+import {About} from './components/About';
+import {Contact} from './components/Contact';
+import {NoMatch} from './components/NoMatch';
+
 
 
 class App extends Component {
@@ -15,7 +21,7 @@ class App extends Component {
           </Switch>
         </Router>
       </React.Fragment>
-    )
+    );
   }
 }
 export default App;
